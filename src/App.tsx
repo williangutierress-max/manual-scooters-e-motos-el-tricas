@@ -111,7 +111,7 @@ export default function App() {
           </p>
 
           <div className="relative mb-12 max-w-3xl mx-auto flex justify-center items-center">
-            <img src="/images/IMG-5963.webp" alt="Manual Bundle Completo" className="w-full max-w-2xl" />
+            <img src="/images/IMG-5963.webp" alt="Manual Bundle Completo" className="w-full mix-blend-multiply max-w-2xl" />
           </div>
 
           <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto mb-6 leading-relaxed">
@@ -134,16 +134,54 @@ export default function App() {
           
         <div className="relative w-full overflow-hidden mb-10 group">
           <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
-            {/* Original set (Only content pages: 38 to 55) */}
-            {Array.from({length: 18}, (_, i) => i + 38).map((num) => (
-              <div key={num} className="w-72 sm:w-80 flex-shrink-0 px-3">
-                <img src={`/images/IMG-${5900 + num}.webp`} alt={`Página de Conteúdo ${num}`} className="w-full h-auto rounded-xl shadow-md border border-slate-100" />
+            {/* Original set */}
+            {[
+              'https://i.ibb.co/0p1vB4CC/IMG-5938.webp',
+              'https://i.ibb.co/93qCsmrx/IMG-5939.webp',
+              'https://i.ibb.co/4ZytzBxv/IMG-5940.webp',
+              'https://i.ibb.co/Zzw84B82/IMG-5941.webp',
+              'https://i.ibb.co/CsSD9SX4/IMG-5942.webp',
+              'https://i.ibb.co/9kC7y2bD/IMG-5943.webp',
+              'https://i.ibb.co/2YnHNNT1/IMG-5944.webp',
+              'https://i.ibb.co/nsNkKvF4/IMG-5945.webp',
+              'https://i.ibb.co/XfG2QcY1/IMG-5946.webp',
+              'https://i.ibb.co/LDQzJNhq/IMG-5947.webp',
+              'https://i.ibb.co/MDstz1Wk/IMG-5948.webp',
+              'https://i.ibb.co/jvPnWc4K/IMG-5949.webp',
+              'https://i.ibb.co/fGrCrKLw/IMG-5950.webp',
+              'https://i.ibb.co/Zz9JW89t/IMG-5951.webp',
+              'https://i.ibb.co/Y7KTdWyJ/IMG-5952.webp',
+              'https://i.ibb.co/Fk7LMWZb/IMG-5953.webp',
+              'https://i.ibb.co/twj7JBqY/IMG-5954.webp',
+              'https://i.ibb.co/d053jkn9/IMG-5955.webp',
+            ].map((src, i) => (
+              <div key={i} className="w-72 sm:w-80 flex-shrink-0 px-3">
+                <img src={src} alt={`Página de Conteúdo ${i + 1}`} className="w-full h-auto mix-blend-multiply" />
               </div>
             ))}
             {/* Duplicated set for seamless loop */}
-            {Array.from({length: 18}, (_, i) => i + 38).map((num) => (
-              <div key={num + 'dup'} className="w-72 sm:w-80 flex-shrink-0 px-3">
-                <img src={`/images/IMG-${5900 + num}.webp`} alt={`Página de Conteúdo ${num}`} className="w-full h-auto rounded-xl shadow-md border border-slate-100" />
+            {[
+              'https://i.ibb.co/0p1vB4CC/IMG-5938.webp',
+              'https://i.ibb.co/93qCsmrx/IMG-5939.webp',
+              'https://i.ibb.co/4ZytzBxv/IMG-5940.webp',
+              'https://i.ibb.co/Zzw84B82/IMG-5941.webp',
+              'https://i.ibb.co/CsSD9SX4/IMG-5942.webp',
+              'https://i.ibb.co/9kC7y2bD/IMG-5943.webp',
+              'https://i.ibb.co/2YnHNNT1/IMG-5944.webp',
+              'https://i.ibb.co/nsNkKvF4/IMG-5945.webp',
+              'https://i.ibb.co/XfG2QcY1/IMG-5946.webp',
+              'https://i.ibb.co/LDQzJNhq/IMG-5947.webp',
+              'https://i.ibb.co/MDstz1Wk/IMG-5948.webp',
+              'https://i.ibb.co/jvPnWc4K/IMG-5949.webp',
+              'https://i.ibb.co/fGrCrKLw/IMG-5950.webp',
+              'https://i.ibb.co/Zz9JW89t/IMG-5951.webp',
+              'https://i.ibb.co/Y7KTdWyJ/IMG-5952.webp',
+              'https://i.ibb.co/Fk7LMWZb/IMG-5953.webp',
+              'https://i.ibb.co/twj7JBqY/IMG-5954.webp',
+              'https://i.ibb.co/d053jkn9/IMG-5955.webp',
+            ].map((src, i) => (
+              <div key={i + 'dup'} className="w-72 sm:w-80 flex-shrink-0 px-3">
+                <img src={src} alt={`Página de Conteúdo ${i + 1}`} className="w-full h-auto mix-blend-multiply" />
               </div>
             ))}
           </div>
@@ -366,7 +404,7 @@ export default function App() {
                 </span>
                 
                 <div className="w-full flex justify-center mb-8">
-                   <img src={bonus.img} alt={bonus.title} className="w-full max-w-sm h-auto" />
+                   <img src={bonus.img} alt={bonus.title} className="w-full max-w-sm h-auto mix-blend-multiply" />
                 </div>
 
                 <h3 className="text-2xl font-black text-[#0B1526] mb-4 leading-tight">
@@ -398,7 +436,7 @@ export default function App() {
               <h3 className="text-2xl font-black text-[#0B1526] text-center mb-6">Plano Básico</h3>
               
               <div className="flex justify-center mb-6 h-40 items-center">
-                 <img src="/images/IMG-5937.webp" alt="Manual de Reparos Básico" className="h-40 w-auto" />
+                 <img src="/images/IMG-5937.webp" alt="Manual de Reparos Básico" className="h-40 w-auto mix-blend-multiply" />
               </div>
 
               <p className="text-center font-medium text-slate-500 mb-6">Você recebe:</p>
@@ -437,7 +475,7 @@ export default function App() {
               <p className="text-green-600 font-bold text-center mb-6">6x mais conteúdo</p>
               
               <div className="flex justify-center mb-6 h-48 items-center relative">
-                 <img src="/images/IMG-5963.webp" alt="Manual de Reparos Completo" className="h-48 w-auto" />
+                 <img src="/images/IMG-5963.webp" alt="Manual de Reparos Completo" className="h-48 w-auto mix-blend-multiply" />
               </div>
 
               <ul className="space-y-3 mb-8 flex-1 text-sm">
